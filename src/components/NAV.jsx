@@ -8,18 +8,18 @@ export const HERO = {
 		'quietly does its job',
 		' — and keeps doing it.',
 	],
-	sub: 'Five years turning fragile, tangled systems into backends that hold up under real production pressure.',
+	sub: "Five years untangling the systems that couldn't afford to break.",
 };
 export const CREDENTIALS = [
 	{ label: 'Experience', value: '5+ years' },
 	{ label: 'Core stack', value: 'C# / .NET' },
 	{ label: 'Based in', value: 'DFW Metroplex' },
-	{ label: 'Currently', value: 'Available' },
+	{ label: 'Currently', value: 'Open to projects' },
 ];
 export const ABOUT = {
 	intro: [
 		'The best software is the kind nobody notices — it just works, every time, even at 2am when something upstream catches fire.',
-		'I spent the last several years building <strong>enterprise backend systems</strong> that connect huge platforms and absolutely cannot go down. That environment taught me to write code that holds: clean architecture, defensive thinking, and honest engineering over clever shortcuts.',
+		'I spent the last several years building <strong>large-scale backend systems</strong> that connect huge platforms and absolutely cannot go down. That environment taught me to write code that holds: clean architecture, defensive thinking, and honest engineering over clever shortcuts.',
 		'I bring that same standard to freelance work — <strong>no abandoned projects, no surprise invoices, no software you have to babysit.</strong>',
 	],
 	personalHeading: 'Beyond the code',
@@ -29,44 +29,43 @@ export const ABOUT = {
 export const FACTS = [
 	{ label: 'Years in production', value: '5', sup: '+' },
 	{ label: 'Platforms integrated', value: '3' },
-	{ label: 'Projects shipped', value: '100', sup: '%' },
 	{ label: 'Specialty', value: '.NET', small: true },
 ];
 export const SKILLS = [
 	{
-		icon: '⚙️',
+		icon: 'server',
 		title: 'Backend Systems',
-		desc: 'Robust APIs and services built to scale, with the reliability enterprise work demands.',
+		desc: 'APIs and services built to handle real load, written so the next person (often me, six months later) can follow what they do.',
 		tags: ['C# / .NET', 'REST APIs', 'SQL Server'],
 	},
 	{
-		icon: '🔗',
+		icon: 'link',
 		title: 'Integrations',
 		desc: 'Wiring up platforms that were never meant to talk — cleanly, without the fragile glue.',
 		tags: ['Salesforce', 'Boomi', 'JDE'],
 	},
 	{
-		icon: '📱',
+		icon: 'layers',
 		title: 'Full-Stack & Mobile',
 		desc: 'End-to-end apps from database to interface, cross-platform mobile included.',
 		tags: ['React Native', 'Supabase', 'Expo'],
 	},
 	{
-		icon: '🚀',
+		icon: 'gitBranch',
 		title: 'DevOps & CI/CD',
 		desc: 'Pipelines that ship code safely and automatically, so deploys stop being scary.',
 		tags: ['CI/CD', 'Git', 'Automation'],
 	},
 	{
-		icon: '🗄️',
+		icon: 'barChart',
 		title: 'Database Tuning',
 		desc: 'Hunting down slow queries and fixing them at the root — execution plans and all.',
 		tags: ['Optimization', 'Indexing'],
 	},
 	{
-		icon: '🧩',
+		icon: 'layoutGrid',
 		title: 'System Design',
-		desc: 'Architecture considered first, so the foundation holds gracefully as things grow.',
+		desc: 'Sketching the architecture before writing a line of code, so it still makes sense after a year of changes.',
 		tags: ['Architecture', 'Multi-tenancy', 'Scale'],
 	},
 ];
@@ -77,51 +76,56 @@ export const PROJECTS = [
 		cat: 'Mobile Application',
 		title: 'Sermon Notes App',
 		desc: 'A cross-platform mobile app for taking and organizing sermon notes — offline-first sync, multi-tenancy, and Planning Center integration, built on a carefully phased architecture.',
+		note: "Built this for our own church's needs; it grew from a weekend experiment into a real multi-tenant product.",
 		tags: ['React Native', 'Supabase', 'Offline-first'],
 		link: '#',
 	},
 	{
-		icon: '🌡️',
+		icon: '📡',
 		iconClass: 'pi2',
 		cat: 'IoT & Hardware',
-		title: 'Church HVAC Controller',
-		desc: "A control system bridging a Raspberry Pi to a building's BACnet/IP system, giving non-technical staff simple control over heating and cooling through a clean middleware layer.",
-		tags: ['Python', 'FastAPI', 'BACnet'],
+		title: 'SCP2 — Rehrig Pacific Co.',
+		desc: 'A .NET system connecting an enterprise server to kiosk applications across the floor, where products are commissioned by scanning RFID tags and barcodes so they can be tracked through the supply chain from that point on.',
+		note: 'Getting RFID readers and barcode scanners to talk reliably with the enterprise server — without dropping or duplicating a scan — was the part that took real care.',
+		tags: ['C# / .NET', 'RFID', 'Barcode'],
 		link: '#',
 	},
 	{
 		icon: '🔌',
 		iconClass: 'pi3',
 		cat: 'Enterprise Integration',
-		title: 'Production Integration Platform',
+		title: 'Production Integration Platform — Rehrig Pacific Co.',
 		desc: 'Mission-critical integrations connecting Salesforce, Boomi, and JD Edwards — including a high-stakes outage recovery that kept order data flowing for a national operation.',
+		note: 'When this integration went down, orders stopped flowing nationwide — getting it back up was one of the highest-pressure days of my career.',
 		tags: ['Salesforce', 'Boomi', 'JD Edwards'],
 		link: '#',
 	},
 ];
-export const TESTIMONIALS = [
-	{
-		quote:
-			'Chandler took a problem nobody else wanted to touch and just quietly solved it. Reliable, thoughtful, and great to work with.',
-		initials: 'JD',
-		name: 'Your Client Name',
-		role: 'Role, Company',
-	},
-	{
-		quote:
-			'Clear communication, realistic timelines, and code that actually held up in production. Would absolutely hire again.',
-		initials: 'AM',
-		name: 'Your Client Name',
-		role: 'Role, Company',
-	},
-];
+export const HOW_I_WORK = {
+	heading: 'How I work',
+	steps: [
+		{
+			title: 'We start with a conversation',
+			text: "Before any code gets written, I want to understand what you're actually trying to solve — not just the feature you've described, but the problem behind it. A short call is usually enough to scope things honestly, including telling you if something is bigger (or smaller) than it looks.",
+		},
+		{
+			title: "You'll always know where things stand",
+			text: "I send regular updates — what's done, what's next, and anything that's changed. No mystery silences followed by a surprise invoice. If something's going to take longer than planned, you'll hear about it as soon as I know.",
+		},
+		{
+			title: 'Handoff means you can actually run it',
+			text: "When a project wraps, you get more than working code — documentation, a walkthrough, and a clear picture of how to maintain or extend it. I don't disappear after the final commit, and I don't leave you with something only I can touch.",
+		},
+	],
+};
 export const NAV = [
 	{ href: '#about', label: 'About' },
 	{ href: '#skills', label: 'Skills' },
 	{ href: '#projects', label: 'Work' },
-	{ href: '#testimonials', label: 'Praise' },
+	{ href: '#how-i-work', label: 'Process' },
 ];
-export const EMAIL = 'you@email.com';
+export const EMAIL =
+	import.meta.env.VITE_CONTACT_EMAIL || 'chandlergreen1997@gmail.com';
 export const SOCIALS = { github: '#', linkedin: '#' };
 export const Icons = {
 	github: (
@@ -137,6 +141,61 @@ export const Icons = {
 	email: (
 		<svg viewBox='0 0 24 24' aria-hidden='true'>
 			<path d='M22 4H2v16h20V4zm-2 2v.4l-8 5.33L4 6.4V6h16zM4 18V8.6l7.45 4.97a1 1 0 0 0 1.1 0L20 8.6V18H4z' />
+		</svg>
+	),
+};
+
+const stroke = {
+	fill: 'none',
+	stroke: 'currentColor',
+	strokeWidth: 1.8,
+	strokeLinecap: 'round',
+	strokeLinejoin: 'round',
+};
+
+export const SkillIcons = {
+	server: (
+		<svg viewBox='0 0 24 24' aria-hidden='true' {...stroke}>
+			<rect x='2' y='3' width='20' height='8' rx='2' />
+			<rect x='2' y='13' width='20' height='8' rx='2' />
+			<line x1='6' y1='7' x2='6.01' y2='7' />
+			<line x1='6' y1='17' x2='6.01' y2='17' />
+		</svg>
+	),
+	link: (
+		<svg viewBox='0 0 24 24' aria-hidden='true' {...stroke}>
+			<path d='M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5' />
+			<path d='M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L12.5 19.5' />
+		</svg>
+	),
+	layers: (
+		<svg viewBox='0 0 24 24' aria-hidden='true' {...stroke}>
+			<polygon points='12 2 2 7 12 12 22 7 12 2' />
+			<polyline points='2 17 12 22 22 17' />
+			<polyline points='2 12 12 17 22 12' />
+		</svg>
+	),
+	gitBranch: (
+		<svg viewBox='0 0 24 24' aria-hidden='true' {...stroke}>
+			<line x1='6' y1='3' x2='6' y2='15' />
+			<circle cx='18' cy='6' r='3' />
+			<circle cx='6' cy='18' r='3' />
+			<path d='M18 9a9 9 0 0 1-9 9' />
+		</svg>
+	),
+	barChart: (
+		<svg viewBox='0 0 24 24' aria-hidden='true' {...stroke}>
+			<line x1='12' y1='20' x2='12' y2='10' />
+			<line x1='18' y1='20' x2='18' y2='4' />
+			<line x1='6' y1='20' x2='6' y2='16' />
+		</svg>
+	),
+	layoutGrid: (
+		<svg viewBox='0 0 24 24' aria-hidden='true' {...stroke}>
+			<rect x='3' y='3' width='7' height='7' rx='1' />
+			<rect x='14' y='3' width='7' height='7' rx='1' />
+			<rect x='14' y='14' width='7' height='7' rx='1' />
+			<rect x='3' y='14' width='7' height='7' rx='1' />
 		</svg>
 	),
 };

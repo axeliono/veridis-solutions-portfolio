@@ -458,8 +458,12 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.2rem;
+	color: var(--forest);
 	flex-shrink: 0;
+}
+.cw-skill-icon svg {
+	width: 20px;
+	height: 20px;
 }
 .cw-skill-card h3 {
 	font-family: var(--font-fraunces);
@@ -558,6 +562,11 @@ button {
 	max-width: 62ch;
 	margin-bottom: 10px;
 }
+.cw-proj-note {
+	font-family: var(--font-newsreader);
+	font-style: italic;
+	color: var(--forest);
+}
 .cw-proj-meta {
 	display: flex;
 	gap: 8px;
@@ -576,12 +585,12 @@ button {
 	transform: translateX(5px);
 }
 
-.cw-test-grid {
+.cw-how-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 }
-.cw-test-card {
+.cw-how-card {
 	background: var(--card);
 	border: 1px solid var(--border);
 	border-radius: 18px;
@@ -590,55 +599,21 @@ button {
 		transform 0.3s,
 		box-shadow 0.3s;
 }
-.cw-test-card:hover {
+.cw-how-card:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 14px 32px var(--shadow);
 }
-.cw-quote-mark {
+.cw-how-card h3 {
 	font-family: var(--font-fraunces);
-	font-size: 3rem;
-	color: var(--gold);
-	line-height: 0.5;
-	opacity: 0.45;
-}
-.cw-test-card p {
-	font-family: var(--font-newsreader);
-	font-size: 1.1rem;
-	color: var(--ink);
-	margin: 10px 0 20px;
-	line-height: 1.5;
-}
-.cw-test-author {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-.cw-test-avatar {
-	width: 42px;
-	height: 42px;
-	border-radius: 50%;
-	background: var(--moss);
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	font-size: 1.18rem;
 	font-weight: 600;
-	font-size: 0.9rem;
+	color: var(--forest);
+	margin-bottom: 10px;
 }
-.cw-test-name {
-	font-weight: 600;
-	font-size: 0.92rem;
-}
-.cw-test-role {
-	font-size: 0.82rem;
+.cw-how-card p {
+	font-size: 0.98rem;
 	color: var(--ink-soft);
-}
-.cw-test-note {
-	text-align: center;
-	margin-top: 26px;
-	color: var(--moss);
-	font-size: 0.88rem;
-	font-style: italic;
+	line-height: 1.6;
 }
 
 #contact {
@@ -731,6 +706,10 @@ button {
 	font-size: 0.82rem;
 	color: var(--moss);
 }
+.cw-footer-email {
+	font-size: 0.82rem;
+	color: var(--moss);
+}
 
 @media (max-width: 860px) {
 	.cw-hero-grid {
@@ -744,7 +723,7 @@ button {
 	.cw-skills-grid {
 		grid-template-columns: 1fr 1fr;
 	}
-	.cw-test-grid {
+	.cw-how-grid {
 		grid-template-columns: 1fr;
 	}
 	.cw-nav-toggle {

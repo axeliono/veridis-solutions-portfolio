@@ -8,10 +8,11 @@ import {
 	FACTS,
 	SKILLS,
 	PROJECTS,
-	TESTIMONIALS,
+	HOW_I_WORK,
 	EMAIL,
 	SOCIALS,
 	Icons,
+	SkillIcons,
 } from './NAV';
 
 function Reveal({
@@ -193,7 +194,7 @@ export default function Portfolio() {
 								key={s.title}
 							>
 								<div className='cw-skill-top'>
-									<div className='cw-skill-icon'>{s.icon}</div>
+									<div className='cw-skill-icon'>{SkillIcons[s.icon]}</div>
 									<h3>{s.title}</h3>
 								</div>
 								<p>{s.desc}</p>
@@ -225,6 +226,7 @@ export default function Portfolio() {
 								<div className='cw-proj-cat'>{p.cat}</div>
 								<h3>{p.title}</h3>
 								<p>{p.desc}</p>
+								<p className='cw-proj-note'>{p.note}</p>
 								<div className='cw-proj-meta'>
 									{p.tags.map((t) => (
 										<span className='cw-tag' key={t}>
@@ -241,32 +243,20 @@ export default function Portfolio() {
 				</div>
 			</section>
 
-			<section id='testimonials'>
+			<section id='how-i-work'>
 				<div className='cw-wrap'>
 					<Reveal className='cw-sec-head'>
 						<span className='cw-sec-num'>04</span>
-						<h2 className='cw-h2'>
-							What people <em>say</em>.
-						</h2>
+						<h2 className='cw-h2'>{HOW_I_WORK.heading}</h2>
 					</Reveal>
-					<div className='cw-test-grid'>
-						{TESTIMONIALS.map((t, i) => (
-							<Reveal delay={i * 80} className='cw-test-card' key={i}>
-								<div className='cw-quote-mark'>&ldquo;</div>
-								<p>{t.quote}</p>
-								<div className='cw-test-author'>
-									<div className='cw-test-avatar'>{t.initials}</div>
-									<div>
-										<div className='cw-test-name'>{t.name}</div>
-										<div className='cw-test-role'>{t.role}</div>
-									</div>
-								</div>
+					<div className='cw-how-grid'>
+						{HOW_I_WORK.steps.map((step, i) => (
+							<Reveal delay={i * 80} className='cw-how-card' key={step.title}>
+								<h3>{step.title}</h3>
+								<p>{step.text}</p>
 							</Reveal>
 						))}
 					</div>
-					<p className='cw-test-note'>
-						&uarr; Swap these out as real testimonials come in.
-					</p>
 				</div>
 			</section>
 
@@ -302,6 +292,7 @@ export default function Portfolio() {
 						<p className='cw-footer-loc'>
 							Dallas&ndash;Fort Worth Metroplex &middot; Available remotely
 						</p>
+						<p className='cw-footer-email'>{EMAIL}</p>
 					</div>
 				</div>
 			</footer>
