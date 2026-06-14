@@ -285,9 +285,27 @@ export default function Portfolio() {
 							&copy; 2026 Chandler. All rights reserved.
 						</p>
 						<div className='cw-footer-socials'>
-							<a href={SOCIALS.github}>{Icons.github}GitHub</a>
-							<a href={SOCIALS.linkedin}>{Icons.linkedin}LinkedIn</a>
-							<a href={`mailto:${EMAIL}`}>{Icons.email}Email</a>
+							<a
+								target='_blank'
+								rel='noopener noreferrer'
+								href={SOCIALS.github}
+							>
+								{Icons.github}GitHub
+							</a>
+							<a
+								target='_blank'
+								rel='noopener noreferrer'
+								href={SOCIALS.linkedin}
+							>
+								{Icons.linkedin}LinkedIn
+							</a>
+							<a
+								target='_blank'
+								rel='noopener noreferrer'
+								href={`mailto:${EMAIL}`}
+							>
+								{Icons.email}Email
+							</a>
 						</div>
 						<p className='cw-footer-loc'>
 							Dallas&ndash;Fort Worth Metroplex &middot; Available remotely

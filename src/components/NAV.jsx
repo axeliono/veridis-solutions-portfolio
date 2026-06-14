@@ -125,8 +125,10 @@ export const NAV = [
 export const EMAIL =
 	import.meta.env.VITE_CONTACT_EMAIL || 'chandlergreen1997@gmail.com';
 export const SOCIALS = {
-	github: env.VITE_GITHUB_URL,
-	linkedin: env.VITE_LINKEDIN_URL,
+	github: import.meta.env.VITE_GITHUB_URL || 'https://www.github.com/axeliono',
+	linkedin:
+		import.meta.env.VITE_LINKEDIN_URL ||
+		'https://www.linkedin.com/in/chandleregreen',
 };
 export const Icons = {
 	github: (
