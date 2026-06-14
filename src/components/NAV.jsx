@@ -1,6 +1,4 @@
-// ============================================================
-//  EDIT YOUR CONTENT HERE
-// ============================================================
+const env = import.meta.env;
 export const HERO = {
 	label: 'Backend & Full-Stack Engineer · Available for freelance',
 	headline: [
@@ -126,7 +124,10 @@ export const NAV = [
 ];
 export const EMAIL =
 	import.meta.env.VITE_CONTACT_EMAIL || 'chandlergreen1997@gmail.com';
-export const SOCIALS = { github: '#', linkedin: '#' };
+export const SOCIALS = {
+	github: env.VITE_GITHUB_URL,
+	linkedin: env.VITE_LINKEDIN_URL,
+};
 export const Icons = {
 	github: (
 		<svg viewBox='0 0 24 24' aria-hidden='true'>
